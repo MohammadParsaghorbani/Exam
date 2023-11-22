@@ -14,36 +14,45 @@ else:
     random_option="scissor"
 if random_option=="rock" and player=="rock":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("nobody win!")
 elif random_option=="rock" and player=="paper":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("player win!")
     player_score=player_score+1
 elif random_option=="rock" and player=="scissor":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("robot win!")
     rnd_score=rnd_score+1
 elif random_option=="paper" and player=="rock":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("robot win!")
     rnd_score=rnd_score+1
 elif random_option=="paper" and player=="paper":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("nobody win!")
 elif random_option=="paper" and player=="scissor":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("player win!")
     player_score=player_score+1
 elif random_option=="scissor" and player=="rock":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("player win!")
     player_score=player_score+1
 elif random_option=="scissor" and player=="paper":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("player win!")
     rnd_score=rnd_score+1
 elif random_option=="scissor" and player=="scissor":
     print("robot said:",random_option)
+    random_option="notdefind"
     print("nobody win!")
 if rnd_score>player_score:
     winner="robot"
@@ -52,6 +61,8 @@ else:
 print(f"************so,{winner} is the winner!************")
 again=input("do you want to play again?y/n: ")
 while again=="y":
+    rnd=random.randint(0,2)
+    random_option="notdefind"
     print("**********rock,paper,scissor**********")
     player=input("enter your option: ")
     if rnd==0:
